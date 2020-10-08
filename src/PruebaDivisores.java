@@ -24,12 +24,23 @@ interface Validacion{
 	}
 }
 
+class Divisores{
+	public void obtenerDivisores(int it, int cons) {
+		if(it<=cons) {
+			if(cons%it==0) {
+				System.out.println(it+"	");
+			}
+			obtenerDivisores((it+1),cons);
+		}
+	}
+}
 
 public class PruebaDivisores {
 
 	public static void main(String[] args) {
 		
-		
+		Divisores dv = new Divisores();
+		dv.obtenerDivisores(1, 100);
 
 	}
 
