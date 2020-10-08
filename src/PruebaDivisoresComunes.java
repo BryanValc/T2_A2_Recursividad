@@ -17,11 +17,8 @@ class DivisoresComunes{
 		}else {
 			System.out.println("cantidad de divisores : "+cnt);
 		}
-		
-		
-		
-	}
 	
+	}
 	
 }
 
