@@ -40,7 +40,30 @@ public class PruebaDivisores {
 	public static void main(String[] args) {
 		
 		Divisores dv = new Divisores();
-		dv.obtenerDivisores(1, 100);
+		
+		boolean salir = false;
+		byte opc=0;
+		int cons=0;
+		do {
+			System.out.println(" 1)Sacar divisores \n 2)Salir");
+			opc = (byte) Validacion.validacionNatural();
+			switch (opc) {
+			case 1:
+				System.out.println("numero:");
+				cons = Validacion.validacionNatural();
+				dv.obtenerDivisores(1,cons);
+				break;
+			case 2:
+				salir=true;
+				break;
+			default:
+				System.out.println("Opcion no valida");
+				break;
+			}
+			
+			
+		} while (!salir);
+		System.out.println("fin de ejecucion");
 
 	}
 
