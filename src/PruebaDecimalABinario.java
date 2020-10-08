@@ -25,10 +25,31 @@ public class PruebaDecimalABinario {
 		
 		DecimalBinario db = new DecimalBinario();
 		
-		db.conversion(89, "");
+		boolean salir = false;
+		byte opc=0;
+		int a=0;
+		int b=0;
 		
-		
-		
+		do {
+			System.out.println(" 1)Convertir numero decimal a binario \n 2)Salir");
+			opc = (byte) Validacion.validacionNatural();
+			switch (opc) {
+			case 1:
+				System.out.println("Numero:");
+				a = Validacion.validacionNatural();
+				db.conversion(a, "");
+				break;
+			case 2:
+				salir=true;
+				break;
+			default:
+				System.out.println("Opcion no valida");
+				break;
+			}
+			
+			
+		} while (!salir);
+		System.out.println("fin de ejecucion");
 
 	}
 
