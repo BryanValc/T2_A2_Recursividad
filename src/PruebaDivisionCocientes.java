@@ -32,8 +32,36 @@ public class PruebaDivisionCocientes {
 	public static void main(String[] args) {
 		
 		Division dv = new Division();
-		dv.mostrarCocientes("654321", 12, 0, 0);
-
+		
+		boolean salir = false;
+		byte opc=0;
+		String dividendo="";
+		int divisor=0;
+		
+		do {
+			System.out.println(" 1)Sacar cocientes \n 2)Salir");
+			opc = (byte) Validacion.validacionNatural();
+			switch (opc) {
+			case 1:
+				System.out.println("dividendo:");
+				dividendo = Integer.toString(Validacion.validacionNatural());
+				System.out.println("divisor:");
+				divisor = Validacion.validacionNatural();
+				dv.mostrarCocientes(dividendo, divisor, 0, 0);
+				break;
+			case 2:
+				salir=true;
+				break;
+			default:
+				System.out.println("Opcion no valida");
+				break;
+			}
+			
+			
+		} while (!salir);
+		System.out.println("fin de ejecucion");
+		
+		
 	}
 
 }
