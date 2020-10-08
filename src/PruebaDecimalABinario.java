@@ -28,7 +28,6 @@ public class PruebaDecimalABinario {
 		boolean salir = false;
 		byte opc=0;
 		int a=0;
-		int b=0;
 		
 		do {
 			System.out.println(" 1)Convertir numero decimal a binario \n 2)Salir");
