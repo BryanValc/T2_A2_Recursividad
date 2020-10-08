@@ -17,7 +17,30 @@ public class PruebaFactorial {
 	public static void main(String[] args) {
 		
 		Factorial ft = new Factorial();
-		ft.obtenerFactorial(1,1,6);
+		
+		boolean salir = false;
+		byte opc=0;
+		int cons=0;
+		do {
+			System.out.println(" 1)Sacar factorial \n 2)Salir");
+			opc = (byte) Validacion.validacionNatural();
+			switch (opc) {
+			case 1:
+				System.out.println("numero:");
+				cons = Validacion.validacionNatural();
+				ft.obtenerFactorial(1,1,cons);
+				break;
+			case 2:
+				salir=true;
+				break;
+			default:
+				System.out.println("Opcion no valida");
+				break;
+			}
+			
+			
+		} while (!salir);
+		System.out.println("fin de ejecucion");
 
 	}
 
